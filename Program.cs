@@ -11,7 +11,6 @@ namespace WebApplication13
 
             // добавляем поддержку контроллеров с представлениями
             builder.Services.AddControllersWithViews();
-
             // устанавливаем движок представлений
             builder.Services.Configure<MvcViewOptions>(options => {
                 options.ViewEngines.Clear();
@@ -19,7 +18,6 @@ namespace WebApplication13
             });
 
             var app = builder.Build();
-
             // устанавливаем сопоставление маршрутов с контроллерами
             app.MapControllerRoute(
                 name: "default",
